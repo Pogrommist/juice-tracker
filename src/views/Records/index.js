@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Table } from 'reactstrap';
 import { getRecords } from '../../redux/selectors/records'
 import { addRecord, deleteRecord } from '../../redux/actions/records'
 import { RecordEntity } from '../../components/RecordsEntity'
 import AddRecordForm from './AddRecord'
+import { Header } from '../../components/Header'
 import './index.css';
 
 class Records extends Component {
@@ -19,9 +19,7 @@ class Records extends Component {
     const { records, deleteRecord } = this.props
     return (
       <div className='juice-tracker-Records'>
-        <div className='juice-tracker-header'>
-          <Link to='/login' className='juice-tracker-navlink'>Войти</Link>
-        </div>
+        <Header />
         <AddRecordForm onSubmit={this.handleSubmit} />
         <div className='juice-tracker-records-list'>
           <Table className='juice-tracker-RecordsEntity' striped hover responsive>
