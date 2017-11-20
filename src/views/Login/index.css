@@ -1,3 +1,11 @@
 .LoginPage-container {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.juice-tracker-logo {
+  width: 15rem;
+  height: 10rem;
 }

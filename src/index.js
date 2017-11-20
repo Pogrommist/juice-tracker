@@ -11,6 +11,7 @@ import logger from 'redux-logger'
 import './index.css';
 import LoginPage from './views/Login/';
 import Records from './views/Records'
+import Charts from './views/Charts'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)))
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Switch>
         <Route path='/login' component={LoginPage} />
         <Route path='/records' component={Records} />
+        <Route path='/charts' component={Charts} />
         <Redirect from='/' to='/login' />
       </Switch>
     </Router>

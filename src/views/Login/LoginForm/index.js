@@ -8,12 +8,14 @@ const LoginForm = props => {
     <form onSubmit={handleSubmit} className='juice-tracker-LoginForm'>
       <Field
         name='email'
+        placeholder='email'
         component='input'
         type='email'
         className='juice-tracker-formField'
       />
       <Field
         name='password'
+        placeholder='Пароль'
         component='input'
         type='password'
         className='juice-tracker-formField'
