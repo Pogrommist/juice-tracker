@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 #root {
   height: 100vh;
 }
