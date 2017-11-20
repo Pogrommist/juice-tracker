@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import history from '../../history'
+import LoginForm from './LoginForm'
+import { logIn } from '../../redux/actions/auth'
 import './index.css';
 
-export class LoginPage extends Component {
+class LoginPage extends Component {
+  handleSubmit = values => {
+    const { logIn } = this.props
+    logIn(values)
+    console.log('login', values)
+    history.push('/records')
+  };
+
   render () {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link to='/records'>Записи</Link>
+      <div className='LoginPage-container'>
+        <LoginForm onSubmit={this.handleSubmit} />
       </div>
     )
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  logIn (data) { return dispatch(logIn(data))}
+})
+
+export default connect(null, mapDispatchToProps)(LoginPage)

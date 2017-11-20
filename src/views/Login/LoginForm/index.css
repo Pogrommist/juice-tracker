@@ -1,0 +1,29 @@
+.juice-tracker-LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.juice-tracker-login-btn {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.juice-tracker-login-btn:hover {
+  text-decoration: none;
+  background-color: orange;
+  color: #222;
+}
+
+.juice-tracker-formField {
+  padding: 1rem;
+  width: 25rem;
+  margin: 0.5rem;
+}

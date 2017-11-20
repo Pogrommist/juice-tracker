@@ -5,11 +5,10 @@ import './index.css';
 export class Records extends Component {
   render () {
     return (
-      <div className='Records'>
-        <p>
-          records
-        </p>
-        <Link to='/login'>Войти</Link>
+      <div className='juice-tracker-Records'>
+        <div className='juice-tracker-header'>
+          <Link to='/login' className='juice-tracker-navlink'>Войти</Link>
+        </div>
       </div>
     )
   }

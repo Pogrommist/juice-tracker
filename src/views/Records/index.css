@@ -1,0 +1,16 @@
+.juice-tracker-header {
+  display: flex;
+}
+
+.juice-tracker-navlink {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0;
+}
+.juice-tracker-navlink:hover {
+  text-decoration: none;
+  background-color: orange;
+  color: #222;
+}

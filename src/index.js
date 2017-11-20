@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import './index.css';
-import { LoginPage } from './views/Login/';
+import LoginPage from './views/Login/';
 import { Records } from './views/Records'
 import 'bootstrap/dist/css/bootstrap.css';
 
