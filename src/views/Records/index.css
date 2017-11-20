@@ -1,5 +1,6 @@
 .juice-tracker-header {
   display: flex;
+  background-color: #222;
 }
 
 .juice-tracker-navlink {
