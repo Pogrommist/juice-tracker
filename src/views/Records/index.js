@@ -3,17 +3,26 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Table } from 'reactstrap';
 import { getRecords } from '../../redux/selectors/records'
+import { addRecord, deleteRecord } from '../../redux/actions/records'
 import { RecordEntity } from '../../components/RecordsEntity'
+import AddRecordForm from './AddRecord'
 import './index.css';
 
 class Records extends Component {
+  handleSubmit = values => {
+    const { addRecord } = this.props
+    addRecord(values)
+    console.log('values', values)
+  }
+
   render () {
-    const { records } = this.props
+    const { records, deleteRecord } = this.props
     return (
       <div className='juice-tracker-Records'>
         <div className='juice-tracker-header'>
           <Link to='/login' className='juice-tracker-navlink'>Войти</Link>
         </div>
+        <AddRecordForm onSubmit={this.handleSubmit} />
         <div className='juice-tracker-records-list'>
           <Table className='juice-tracker-RecordsEntity' striped hover responsive>
             <thead>
@@ -22,13 +31,19 @@ class Records extends Component {
                 <th>Вкус</th>
                 <th>СРЦ</th>
                 <th>Цена</th>
-                <th>Разница</th>
               </tr>
             </thead>
             <tbody>
               {
                 records.map(record => {
-                  return <RecordEntity key={record.id} recordEntity={record} />
+                  return (
+                    <RecordEntity
+                      key={record.id}
+                      id={record.id}
+                      recordEntity={record}
+                      onDelete={deleteRecord}
+                    />
+                  )
                 })
               }
             </tbody>
@@ -43,5 +58,9 @@ class Records extends Component {
 const mapStateToProps = state => ({
   records: getRecords(state)
 })
+const mapDispatchToProps = dispatch => ({
+  addRecord (data) {return dispatch(addRecord(data))},
+  deleteRecord (id) {return dispatch(deleteRecord(id))}
+})
 
-export default connect(mapStateToProps, null)(Records)
+export default connect(mapStateToProps, mapDispatchToProps)(Records)
