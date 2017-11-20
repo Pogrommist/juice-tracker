@@ -1,0 +1,33 @@
+{
+  "extends": ["xo/esnext", "xo-react/space", "plugin:import/errors"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "curly": ["error", "multi-line"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "object-curly-spacing": ["error", "always"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "no-alert": "off",
+    "react/forbid-component-props": "off",
+    "react/no-string-refs": "off",
+    "react/prop-types": "warn",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never"
+      }
+    ],
+    "react/sort-comp": ["error"],
+    "semi": "off",
+    "space-before-function-paren": ["error", "always"]
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
