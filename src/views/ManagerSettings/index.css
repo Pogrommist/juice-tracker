@@ -1,0 +1,14 @@
+.juice-tracker-ManagerSettings {
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.juice-tracker-ManagerSettings-avatar {
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid orange;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

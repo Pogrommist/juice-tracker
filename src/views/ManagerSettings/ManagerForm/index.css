@@ -1,0 +1,30 @@
+.juice-tracker-ManagerForm-form {
+  min-width: 30rem;
+}
+.juice-tracker-ManagerForm-form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.juice-tracker-ManagerForm-form-field input {
+  padding: 0.5rem 1rem;
+  border: 2px solid orange;
+  border-radius: 0.3rem;
+}
+.juice-tracker-ManagerForm-form-field label {
+  font-weight: 600;
+}
+.juice-tracker-ManagerForm-form-button {
+  text-align: right;
+}
+.juice-tracker-ManagerForm-form button {
+  background-color: orange;
+  color: #000;
+  padding: 0.7rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  font-weight: 600;
+}
