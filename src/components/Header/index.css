@@ -1,6 +1,9 @@
 .juice-tracker-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #222;
+  position: relative;
 }
 
 .juice-tracker-navlink {
@@ -19,4 +22,13 @@
 .juice-tracker-navlink.is-selected {
   background-color: orange;
   color: #222;
+}
+
+.juice-tracker-header-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0.5rem 1rem;
 }

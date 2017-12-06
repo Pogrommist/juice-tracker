@@ -1,0 +1,19 @@
+.juice-tracker-ManagerMenu {
+  position: absolute;
+  right: 1rem;
+  bottom: -5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: gold;
+}
+
+.juice-tracker-ManagerMenu-navlink {
+  color: #000;
+
+}
+
+.juice-tracker-ManagerMenu-navlink:hover {
+  color: #fff;
+  text-decoration: none;
+}
