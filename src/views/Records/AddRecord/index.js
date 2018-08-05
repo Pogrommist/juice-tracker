@@ -14,21 +14,21 @@ const AddRecordForm = props => {
         className='juice-tracker-AddRecord-formField'
       />
       <Field
-        name='description'
+        name='flavor'
         placeholder='Вкус'
         component='input'
         type='text'
         className='juice-tracker-AddRecord-formField'
       />
       <Field
-        name='initialPrice'
+        name='initial_price'
         placeholder='СРЦ'
         component='input'
         type='text'
         className='juice-tracker-AddRecord-formField'
       />
       <Field
-        name='price'
+        name='full_price'
         placeholder='Цена'
         component='input'
         type='text'
